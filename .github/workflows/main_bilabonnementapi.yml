@@ -38,7 +38,7 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     env:
       JDBC_DATABASE_URL: ${{ secrets.JDBC_DATABASE_URL }}
-      
+      # Add other environment variables as needed
 
     steps:
       - name: Download artifact from build job
