@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: java-app
-          path: '${{ github.workspace }}/bilabonnementapi/target/*.jar'
+          path: ${{ github.workspace }}/bilabonnementapi/target
 
       
 
@@ -44,7 +44,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: java-app
-          path: '${{ github.workspace }}/bilabonnementapi/target/*.jar'
+          path: ${{ github.workspace }}/bilabonnementapi/target
      
 
       - name: Deploy to Azure Web App
@@ -54,4 +54,4 @@ jobs:
           app-name: 'bilabonnementapi'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0EFA79FB73E841B6862445FD46283A3D }}
-          package: '*.jar'
+          package: ${{ github.workspace }}/bilabonnementapi/target/*.jar
