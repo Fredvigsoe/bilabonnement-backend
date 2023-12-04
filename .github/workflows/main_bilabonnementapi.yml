@@ -54,4 +54,3 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_85045B8F2B314AB3ADC38A1F2863EBD7 }}
           package: '*.jar'
-          run: mvn -B package -P prod --file pom.xml
