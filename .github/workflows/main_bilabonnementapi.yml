@@ -24,11 +24,7 @@ jobs:
       - name: Build with Maven (without tests)
         run: mvn -f bilabonnementapi/pom.xml clean install -DskipTests
 
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v3
-        with:
-          name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+      
 
   deploy:
     runs-on: windows-latest
@@ -38,11 +34,7 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v3
-        with:
-          name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+     
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
