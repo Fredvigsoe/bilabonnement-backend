@@ -36,9 +36,6 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    env:
-      JDBC_DATABASE_URL: ${{ secrets.JDBC_DATABASE_URL }}
-      # Add other environment variables as needed
 
     steps:
       - name: Download artifact from build job
@@ -52,5 +49,5 @@ jobs:
         with:
           app-name: 'bilabonnementapi'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_85045B8F2B314AB3ADC38A1F2863EBD7 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0EFA79FB73E841B6862445FD46283A3D }}
           package: '*.jar'
