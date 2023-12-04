@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'bilabonnementapi'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A382C00EE4AD4852BB2814A5084259D8 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_85045B8F2B314AB3ADC38A1F2863EBD7 }}
           package: '*.jar'
