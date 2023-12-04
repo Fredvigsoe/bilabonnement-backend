@@ -1,4 +1,4 @@
-## Bilabonnement API Documentation
+## Bilabonnement API Documentation 
 
 The Bilabonnement API provides endpoints to manage information related to cars, customers, damage reports, and subscriptions. It allows you to perform CRUD operations (Create, Read, Update, Delete) on these entities.
 
@@ -133,3 +133,5 @@ Response: No content.
 
 #### Error Handling 
 In case of an error, the API will return an appropriate HTTP status code along with a JSON response containing details about the error.
+
+WilliELM, JeppNeu123, Fredvigsoe
