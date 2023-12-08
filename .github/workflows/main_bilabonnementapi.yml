@@ -1,0 +1,63 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build and deploy JAR app to Azure Web App - bilabonnementapi
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Java version
+        uses: actions/setup-java@v1
+        with:
+          java-version: '17'
+
+      - name: Build with Maven (without tests)
+        run: mvn -f bilabonnementapi/pom.xml clean install -DskipTests
+       
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v3
+        with:
+          name: java-app
+          path: ${{ github.workspace }}/bilabonnementapi/target
+
+      
+
+  deploy:
+    runs-on: windows-latest
+    needs: build
+    environment:
+      name: 'Production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+    env:
+      JDBC_DATABASE_URL: ${{ secrets.JDBC_DATABASE_URL }}
+      JDBC_USERNAME: ${{ secrets.JDBC_USERNAME }}
+      JDBC_PASSWORD: ${{ secrets.JDBC_PASSWORD }}
+      
+    
+
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v3
+        with:
+          name: java-app
+          path: ${{ github.workspace }}/bilabonnementapi/target
+     
+
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'bilabonnementapi'
+          slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0EFA79FB73E841B6862445FD46283A3D }}
+          package: ${{ github.workspace }}/bilabonnementapi/target/*.jar
