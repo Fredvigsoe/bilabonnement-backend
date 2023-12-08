@@ -32,25 +32,25 @@ public class DeveloperData implements ApplicationRunner{
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        Car car1 = new Car("Chevrolet", "c5", 190000, "benz", "reg51z", "aa238f1",false);
-        Car car2 = new Car("Kia ID1", "k44", 330000, "el", "reg52z", "bb238f1",false);
-        Car car3 = new Car("Volvo", "v40", 680000, "el", "reg53z", "cc238f1",false);
-        Car car4 = new Car("Land Rover", "lr1", 1400000, "diesel", "reg54z", "dd238f1",false);
-        Car car5 = new Car("Porsche Panamera", "PP32", 1609000, "hybrid", "reg55z", "ee238f1",false);
-        Car car6 = new Car("Mitsubishi", "M2", 350000, "benz", "reg56z", "ff238f1",false);
-        Car car7 = new Car("Volkswagen ID3", "V23", 400000, "el", "reg57z", "gg238f1",false);
-        Car car8 = new Car("Renault", "R1", 540000, "benz", "reg58z", "hh238f1",false);
-        Car car9 = new Car("Land Rover", "lr10", 6579000, "diesel", "reg59z", "ll238f1",false);
-        Car car10 = new Car("Smart", "S120", 680000, "benz", "reg61z", "mm238f1",false);
-        Car car11 = new Car("BMW ID3", "BC2", 790000, "el", "reg62z", "nn238f1",true);
-        Car car12 = new Car("BMW ID4", "BC4", 799000, "el", "reg63z", "oo238f1",true);
-        Car car13 = new Car("Porsche Taycan", "pt112", 1690000, "el", "reg64z", "pp238f1",true);
-        Car car14 = new Car("Volkswagen", "V12", 250000, "diesel", "reg65z", "aa308f1",true);
-        Car car15 = new Car("Ford", "fturbo", 356454, "hybrid", "reg66z", "bb308f1",true);
-        Car car16 = new Car("Volvo", "V123", 357000, "hybrid", "reg67z", "cc308f1",true);
-        Car car17 = new Car("Kia ID2", "k12", 860000, "benz", "reg68z", "dd338f1",true);
-        Car car18 = new Car("Jaguar", "j82", 780000, "diesel", "reg69z", "ee2218f1",true);
-        Car car19 = new Car("Tesla", "T22", 12034333, "el", "reg70z", "ff238f5",true);
+        Car car1 = new Car("","Chevrolet", "c5", 190000, "benz", "reg51z", "aa238f1",false);
+        Car car2 = new Car("","Kia ID1", "k44", 330000, "el", "reg52z", "bb238f1",false);
+        Car car3 = new Car("","Volvo", "v40", 680000, "el", "reg53z", "cc238f1",false);
+        Car car4 = new Car("","Land Rover", "lr1", 1400000, "diesel", "reg54z", "dd238f1",false);
+        Car car5 = new Car("","Porsche Panamera", "PP32", 1609000, "hybrid", "reg55z", "ee238f1",false);
+        Car car6 = new Car("","Mitsubishi", "M2", 350000, "benz", "reg56z", "ff238f1",false);
+        Car car7 = new Car("","Volkswagen ID3", "V23", 400000, "el", "reg57z", "gg238f1",false);
+        Car car8 = new Car("","Renault", "R1", 540000, "benz", "reg58z", "hh238f1",false);
+        Car car9 = new Car("","Land Rover", "lr10", 6579000, "diesel", "reg59z", "ll238f1",false);
+        Car car10 = new Car("","Smart", "S120", 680000, "benz", "reg61z", "mm238f1",false);
+        Car car11 = new Car("https://i.imgur.com/2Q4QCiy.png","BMW ID3", "BC2", 790000, "el", "reg62z", "nn238f1",true);
+        Car car12 = new Car("","BMW ID4", "BC4", 799000, "el", "reg63z", "oo238f1",true);
+        Car car13 = new Car("https://i.imgur.com/TKzxmrz.png","Porsche Taycan", "pt112", 1690000, "el", "reg64z", "pp238f1",true);
+        Car car14 = new Car("https://i.imgur.com/ckf5tBk.png","Volkswagen", "V12", 250000, "diesel", "reg65z", "aa308f1",true);
+        Car car15 = new Car("https://i.imgur.com/TukSeEi.png","Ford", "fturbo", 356454, "hybrid", "reg66z", "bb308f1",true);
+        Car car16 = new Car("https://i.imgur.com/OBp2v1a.png","Volvo", "V123", 357000, "hybrid", "reg67z", "cc308f1",true);
+        Car car17 = new Car("https://i.imgur.com/BGb4NES.png","Kia ID2", "k12", 860000, "benz", "reg68z", "dd338f1",true);
+        Car car18 = new Car("https://i.imgur.com/RIMCl3G.png","Jaguar", "j82", 780000, "diesel", "reg69z", "ee2218f1",true);
+        Car car19 = new Car("https://i.imgur.com/3GD2omN.png","Tesla", "T22", 1203433, "el", "reg70z", "ff238f5",true);
 
         carRepo.save(car1);
         carRepo.save(car2);

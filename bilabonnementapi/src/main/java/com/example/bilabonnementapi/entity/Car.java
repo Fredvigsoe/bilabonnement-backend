@@ -13,6 +13,7 @@ public class Car {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    private String img;
     //@Column(name = "bilmaerke")
     private String brand;
 
@@ -32,7 +33,8 @@ public class Car {
     @JsonIgnore
     private List<Subscription> subscriptions;
 
-    public Car(String brand, String model, int price, String fueltype, String regNr, String nummerplade, Boolean isCarFree) {
+    public Car( String img, String brand, String model, int price, String fueltype, String regNr, String nummerplade, Boolean isCarFree) {
+        this.img = img;
         this.brand = brand;
         this.model = model;
         this.price = price;
@@ -42,7 +44,8 @@ public class Car {
         this.isCarFree = isCarFree;
     }
 
-    public Car(String brand, String model, int price, String fueltype, Boolean isCarFree, List<Subscription> subscriptions) {
+    public Car(String img, String brand, String model, int price, String fueltype, Boolean isCarFree, List<Subscription> subscriptions) {
+        this.img = img;
         this.brand = brand;
         this.model = model;
         this.price = price;
@@ -126,10 +129,19 @@ public class Car {
         isCarFree = carFree;
     }
 
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
     @Override
     public String toString() {
         return "Car{" +
                 "id=" + id +
+                ", img='" + img + '\'' +
                 ", brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 ", price=" + price +
