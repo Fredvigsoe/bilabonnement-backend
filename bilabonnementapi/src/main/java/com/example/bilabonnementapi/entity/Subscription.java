@@ -1,6 +1,7 @@
 package com.example.bilabonnementapi.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -34,7 +35,9 @@ public class Subscription {
     //@Column(name = "kmkoertstart")
     private int kmstart;
 
+
     //@Column(name = "kmkoert")
+    @Nullable
     private int kmdone;
 
     //@Column(name = "kmaftalt")
