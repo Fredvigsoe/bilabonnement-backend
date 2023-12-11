@@ -46,7 +46,9 @@ public class Subscription {
     //@Column(name = "abonnementsperiode")
     private int subtime;
 
-    public Subscription(String buydate, String substart, String subend, int kmstart, int kmdone, int kmplanned, int subtime) {
+    private int subcost;
+
+    public Subscription(String buydate, String substart, String subend, int kmstart, int kmdone, int kmplanned, int subtime, int subcost) {
         this.buydate = buydate;
         this.substart = substart;
         this.subend = subend;
@@ -54,9 +56,10 @@ public class Subscription {
         this.kmdone = kmdone;
         this.kmplanned = kmplanned;
         this.subtime = subtime;
+        this.subcost = subcost;
     }
 
-    public Subscription(String buydate, String substart, String subend, int kmstart, int kmdone, int kmplanned, int subtime, Car car) {
+    public Subscription(String buydate, String substart, String subend, int kmstart, int kmdone, int kmplanned, int subtime,int subcost, Car car) {
         this.car = car;
         this.buydate = buydate;
         this.substart = substart;
@@ -65,9 +68,10 @@ public class Subscription {
         this.kmdone = kmdone;
         this.kmplanned = kmplanned;
         this.subtime = subtime;
+        this.subcost = subcost;
     }
 
-    public Subscription(String buydate, String substart, String subend, int kmstart, int kmdone, int kmplanned, int subtime, Car car, Customer customer) {
+    public Subscription(String buydate, String substart, String subend, int kmstart, int kmdone, int kmplanned, int subtime, int subcost, Car car, Customer customer) {
         this.car = car;
         this.customer = customer;
         this.buydate = buydate;
@@ -77,9 +81,10 @@ public class Subscription {
         this.kmdone = kmdone;
         this.kmplanned = kmplanned;
         this.subtime = subtime;
+        this.subcost = subcost;
     }
 
-    public Subscription(String buydate, String substart, String subend, int kmstart, int kmdone, int kmplanned, int subtime, Car car, Customer customer, DamageReport damageReport) {
+    public Subscription(String buydate, String substart, String subend, int kmstart, int kmdone, int kmplanned, int subtime, int subcost, Car car, Customer customer, DamageReport damageReport) {
         this.car = car;
         this.customer = customer;
         this.damageReport = damageReport;
@@ -90,6 +95,7 @@ public class Subscription {
         this.kmdone = kmdone;
         this.kmplanned = kmplanned;
         this.subtime = subtime;
+        this.subcost = subcost;
     }
 
     public Subscription() {
@@ -183,11 +189,21 @@ public class Subscription {
         this.damageReport = damageReport;
     }
 
+    public int getSubcost() {
+        return subcost;
+    }
+
+    public void setSubcost(int subcost) {
+        this.subcost = subcost;
+    }
+
     @Override
     public String toString() {
         return "Subscription{" +
                 "id=" + id +
                 ", car=" + car +
+                ", customer=" + customer +
+                ", damageReport=" + damageReport +
                 ", buydate='" + buydate + '\'' +
                 ", substart='" + substart + '\'' +
                 ", subend='" + subend + '\'' +
@@ -195,6 +211,7 @@ public class Subscription {
                 ", kmdone=" + kmdone +
                 ", kmplanned=" + kmplanned +
                 ", subtime=" + subtime +
+                ", subcost=" + subcost +
                 '}';
     }
 }

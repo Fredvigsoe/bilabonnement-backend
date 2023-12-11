@@ -94,16 +94,16 @@ public class DeveloperData implements ApplicationRunner{
         customerRepo.save(customer9);
         customerRepo.save(customer10);
 
-        Subscription sub1 = new Subscription("10-06-2020", "25-12-2021", "25-12-2023", 14815, 19400, 18000,12, car1, customer1);
-        Subscription sub2 = new Subscription("23-07-2021", "14-09-2021", "14-09-2022", 21532, 16566, 18000,12, car2, customer2);
-        Subscription sub3 = new Subscription("29-07-2021", "18-06-2022", "18-06-2023", 19755, 17599, 18000,12, car3, customer3);
-        Subscription sub4 = new Subscription("24-01-2022", "21-12-2022", "21-12-2023", 15899, 19469, 18000,12, car4, customer4);
-        Subscription sub5 = new Subscription("07-06-2021", "19-08-2021", "19-08-2022", 19404, 22861, 18000,24, car5, customer5);
-        Subscription sub6 = new Subscription("06-06-2021", "29-12-2021", "29-12-2023", 16912, 29169, 36000,24, car6, customer6);
-        Subscription sub7 = new Subscription("19-04-2021", "30-07-2021", "30-07-2023", 15530, 27355, 36000,24, car7, customer7);
-        Subscription sub8 = new Subscription("10-06-2019", "06-02-2021", "06-02-2023", 19817, 26689, 36000,24, car8, customer8);
-        Subscription sub9 = new Subscription("03-04-2020", "03-02-2021", "03-02-2023", 20967, 26017, 36000,24, car9, customer9);
-        Subscription sub10 = new Subscription("19-06-2021", "03-12-2021", "03-12-2023", 24170, 27765, 36000,24, car10, customer10);
+        Subscription sub1 = new Subscription("10-06-2020", "25-12-2021", "25-12-2023", 14815, 19400, 18000,12, 4000, car1, customer1);
+        Subscription sub2 = new Subscription("23-07-2021", "14-09-2021", "14-09-2022", 21532, 16566, 18000,12, 4500, car2, customer2);
+        Subscription sub3 = new Subscription("29-07-2021", "18-06-2022", "18-06-2023", 19755, 17599, 18000,12, 5000, car3, customer3);
+        Subscription sub4 = new Subscription("24-01-2022", "21-12-2022", "21-12-2023", 15899, 19469, 18000,12,6500, car4, customer4);
+        Subscription sub5 = new Subscription("07-06-2021", "19-08-2021", "19-08-2022", 19404, 22861, 18000,24,9500, car5, customer5);
+        Subscription sub6 = new Subscription("06-06-2021", "29-12-2021", "29-12-2023", 16912, 29169, 36000,24, 4000, car6, customer6);
+        Subscription sub7 = new Subscription("19-04-2021", "30-07-2021", "30-07-2023", 15530, 27355, 36000,24,4800, car7, customer7);
+        Subscription sub8 = new Subscription("10-06-2019", "06-02-2021", "06-02-2023", 19817, 26689, 36000,24, 5000, car8, customer8);
+        Subscription sub9 = new Subscription("03-04-2020", "03-02-2021", "03-02-2023", 20967, 26017, 36000,24, 5000, car9, customer9);
+        Subscription sub10 = new Subscription("19-06-2021", "03-12-2021", "03-12-2023", 24170, 27765, 36000,24, 5200, car10, customer10);
 
         subRepo.save(sub1);
         subRepo.save(sub2);
