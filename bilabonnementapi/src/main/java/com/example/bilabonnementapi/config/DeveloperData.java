@@ -40,7 +40,7 @@ public class DeveloperData implements ApplicationRunner{
         Car car6 = new Car("https://i.imgur.com/hEHCdS2.png","Mitsubishi", "M2", 350000, "benz", "reg56z", "ff238f1",false);
         Car car7 = new Car("https://i.imgur.com/wJhY94s.png","Volkswagen ID3", "V23", 400000, "el", "reg57z", "gg238f1",false);
         Car car8 = new Car("https://i.imgur.com/eAreRz2.png","Renault", "R1", 540000, "benz", "reg58z", "hh238f1",false);
-        Car car9 = new Car("https://i.imgur.com/NSDvxO1.png","Land Rover", "lr10", 6579000, "diesel", "reg59z", "ll238f1",false);
+        Car car9 = new Car("https://i.imgur.com/NSDvxO1.png","Land Rover", "lr10", 657900, "diesel", "reg59z", "ll238f1",false);
         Car car10 = new Car("https://i.imgur.com/pxWrfmi.png","Smart", "S120", 680000, "benz", "reg61z", "mm238f1",false);
         Car car11 = new Car("https://i.imgur.com/2Q4QCiy.png","BMW ID3", "BC2", 790000, "el", "reg62z", "nn238f1",true);
         Car car12 = new Car("https://i.imgur.com/s8gK3eE.png","BMW ID4", "BC4", 799000, "el", "reg63z", "oo238f1",true);
